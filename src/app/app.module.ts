@@ -31,6 +31,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SekcjaMieszkaniaComponent } from './sekcje/sekcja-mieszkania/sekcja-mieszkania.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SekcjaFormularzComponent } from './sekcje/sekcja-formularz/sekcja-formularz.component';
+import { SekcjaMapaComponent } from './sekcje/sekcja-mapa/sekcja-mapa.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,13 +46,15 @@ import { SekcjaFormularzComponent } from './sekcje/sekcja-formularz/sekcja-formu
     SekcjaInwestycjaComponent,
     SekcjaGaleriaComponent,
     SekcjaMieszkaniaComponent,
-    SekcjaFormularzComponent
+    SekcjaFormularzComponent,
+    SekcjaMapaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
@@ -64,6 +69,7 @@ import { SekcjaFormularzComponent } from './sekcje/sekcja-formularz/sekcja-formu
     FormsModule,
     ReactiveFormsModule,
     MatSliderModule,
+    GoogleMapsModule,
     CarouselModule.forRoot()
   ],
   providers: [],
