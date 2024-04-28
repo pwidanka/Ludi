@@ -21,10 +21,9 @@ body {
 // mandatory stuff for theming
 $bv-palette-primary: mat-palette($md-gray);
 $bv-palette-accent: mat-palette($md-gold);
-$bv-palette-warn: mat-palette($md-blue);
 
 // include the custom theme components into a theme object
-$bv-theme: mat-light-theme($bv-palette-primary, $bv-palette-accent, $bv-palette-warn);
+$bv-theme: mat-light-theme($bv-palette-primary, $bv-palette-accent);
 
 // include the custom theme object into the angular material theme
 @include angular-material-theme($bv-theme);
