@@ -1,0 +1,39 @@
+<section id="kontakt" class="my-container">
+    <div class="my-row">
+        <h2>KONTAKT</h2>
+
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="15">
+
+            <div fxFlex="50">
+                <form fxLayout="column" fxFlex="100" [formGroup]="form" (ngSubmit)="submit()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Imię i nazwisko</mat-label>
+                        <input matInput formControlName="imieNazwisko">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Telefon</mat-label>
+                        <input matInput formControlName="telefon">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput formControlName="email">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Wiadomość</mat-label>
+                        <textarea matInput rows="6" formControlName="wiadomosc"></textarea>
+                    </mat-form-field>
+
+                    <mat-divider></mat-divider>
+
+                    <button mat-raised-button color="accent">Wyślij wiadomość</button>
+                </form>
+            </div>
+
+            <div fxFlex="50">
+                POZNAJ OFERTĘ <br>
+                Skontaktuj się z naszym konsultantem,
+                który pomoże w wyborze mieszkania
+            </div>
+        </div>
+    </div>
+</section>

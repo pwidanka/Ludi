@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <img src="./assets/logo-magic-house.svg" data-rjs="" alt="Magic House">
+
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+            <a href="#" mat-button>RZUCEWO</a>
+            <a href="#" mat-button (click)="scrollTo('#inwestycja')">O INWESTYCJI</a>
+            <a href="#" mat-button (click)="scrollTo('#galeria')">GALERIA</a>
+            <a href="#" mat-button (click)="scrollTo('#mieszkania')">MIESZKANIA</a>
+            <a href="#" mat-button (click)="scrollTo('#kontakt')">KONTAKT</a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container style="height: calc(100% - 64px)">
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <mat-list-item (click)="sidenav.toggle()">Zamknij</mat-list-item>
+            <mat-list-item>RZUCEWO</mat-list-item>
+            <mat-list-item (click)="scrollTo('#inwestycja')">O INWESTYCJI</mat-list-item>
+            <mat-list-item (click)="scrollTo('#galeria')">GALERIA</mat-list-item>
+            <mat-list-item (click)="scrollTo('#galeria')">MIESZKANIA</mat-list-item>
+            <mat-list-item (click)="scrollTo('#kontakt')">KONTAKT</mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+        <app-main></app-main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
